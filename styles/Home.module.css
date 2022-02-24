@@ -1,9 +1,9 @@
-.container {
+/* .container {
   padding: 0 2rem;
-}
+} */
 
-.main {
-  min-height: 100vh;
+.heading {
+  min-height: 10vh;
   padding: 4rem 0;
   flex: 1;
   display: flex;
@@ -12,6 +12,14 @@
   align-items: center;
 }
 
+.body {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  /* width: fit-content; */
+}
+
+/* 
 .footer {
   display: flex;
   flex: 1;
@@ -26,7 +34,7 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-}
+} */
 
 .title a {
   color: #0070f3;
