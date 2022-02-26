@@ -1,0 +1,14 @@
+.notesContainer {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin: 30px 10px;
+}
+
+.card {
+  width: 30%;
+  border: black 1px solid;
+  padding: 25px;
+  margin: 10px;
+  text-align: center;
+}

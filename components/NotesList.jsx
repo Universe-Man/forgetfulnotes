@@ -1,11 +1,17 @@
+import styles from '../styles/NotesList.module.scss';
+
 const NotesList = (props) => {
 
-  // let data = props.NotesList.map(noteObj => {
-
-  // })
+  let notes = props.notesList.map((noteObj, index) => {
+    return (
+      <div key={index} className={styles.card}>
+        {noteObj}
+      </div>
+    )
+  })
   return (
-    // <div>{data}</div>
-    <div></div>
+    <div className={styles.notesContainer}>{notes}</div>
+    // <div></div>
 
   )
 }
