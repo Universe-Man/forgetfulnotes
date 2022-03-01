@@ -1,10 +1,13 @@
 import styles from '../styles/NotesList.module.scss';
+import clsx from 'clsx';
 
 const NotesList = (props) => {
 
   let notes = props.notesList.map((noteObj, index) => {
     return (
-      <div key={index} className={styles.card}>
+      // <div key={index} className={clsx(styles.card, 'noteCard')}>
+      <div id={`noteCard-${index}`} key={index} className={styles.card}>
+
         {noteObj}
       </div>
     )
