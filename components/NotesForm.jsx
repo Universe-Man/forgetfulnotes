@@ -24,7 +24,7 @@ const NotesForm = (props) => {
           listOfNotes[2].innerHTML = 'omg i seriously have no idea.';
         };
         listOfNotes[i].style.color = 'rgba(0,0,0,1)';
-      }, 2000);
+      }, 1000);
     };
   };
   // console.log(listOfNotes);
