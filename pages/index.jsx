@@ -18,7 +18,7 @@ const Home = () => {
       </div>
       <div className={styles.body}>
         <div>
-          <h3>Feel free to enter a note below and I'll do my best to remember it.</h3>
+          <h3>Feel free to enter a note below and I&apos;ll do my best to remember it.</h3>
         </div>
       </div>
       <div>
