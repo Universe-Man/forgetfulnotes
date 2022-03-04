@@ -1,6 +1,4 @@
-// import '../styles/sass/footer.scss';
-// import '../styles/Footer.module.css'
-import styles from '../styles/Footer.module.scss'
+import styles from '../styles/Footer.module.scss';
 
 const Footer = () => {
   const thisyear = new Date().getFullYear();

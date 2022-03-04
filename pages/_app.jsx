@@ -1,8 +1,6 @@
 import Head from 'next/head'
 import Footer from '../components/Footer'
 import '../styles/globals.scss'
-// import '../styles/Footer.module.css'
-
 
 const ForgetfulNotes = ({ Component, pageProps }) => {
   return (

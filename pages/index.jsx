@@ -1,5 +1,3 @@
-// import Head from 'next/head'
-// import Image from 'next/image'
 import React, { useState } from 'react';
 import styles from '../styles/Home.module.scss'
 import NotesList from '../components/NotesList'
@@ -14,9 +12,9 @@ const Home = () => {
     <>
       <div className={styles.heading}>
         <h1 className={styles.title}>
-          Welcome to Forgetful Notes
+          Welcome to <span className={styles.green}>Forgetful</span> Notes
         </h1>
-        <h2>(Did I already tell you that?)</h2>
+        <h2>(did I already tell you that?)</h2>
       </div>
       <div className={styles.body}>
         <div>
