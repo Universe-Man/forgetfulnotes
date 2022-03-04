@@ -6,8 +6,22 @@
 
 .textInput {
   padding: 10px;
+  background-color: #fff1c7;
+  margin: 0 10px;
+  min-width: 500px;
+  min-height: 50px;
+  text-align: center;
+  border: black 3px solid;
+  border-radius: 15px;
+  font-size: 20px;
 }
 
 .submitButton {
   padding: 10px;
+  background-color: #5fcf59;
+  border: black 3px solid;
+  border-radius: 15px;
+  min-width: 125px;
+  margin: 0 10px;
+  font-size: 20px;
 }
