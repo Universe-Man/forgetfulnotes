@@ -1,3 +1,10 @@
+<!-- FUTURE DEVELOPMENT PLANS:
+1) SCRAMBLING WORDS AND HAVING MORE LEVELS OF FORGETFULNESS
+2) ADD SOUND EFFECTS AND VISUAL ANIMATIONS
+3) ADD A "PERSON OR ROBOT" ENTITY AS THE NOTE TAKER (REACT TO MORE NOTES)
+4) NOTE REPLACEMENT LOOP WORK TO BE FIXED IN NOTESFORM ON LINE 33
+5) OTHERS? -->
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

@@ -4,66 +4,61 @@ import styles from '../styles/NotesForm.module.scss'
 const NotesForm = (props) => {
 
   const forgetNotes = (listOfNotes) => {
-    // console.log(listOfNotes[0].innerHTML.split(' '));
-
-
-    // let rememberedWords = [];
-
-
-
-
 
     for (let i = 0; i < listOfNotes.length; i++) {
       listOfNotes[i].style.color = 'rgba(0,0,0,0)';
-      let words = getWords(listOfNotes[i]);
-      console.log('yoyoyo', words);
+      let random = Math.floor(Math.random() * 10) % 2 === 0;
+      let words = getWords(listOfNotes[i], random);
 
       setTimeout(() => {
         listOfNotes[0].innerHTML = words;
         if (i === 1) {
-          listOfNotes[1].innerHTML = words;
+          if (random) {
+            listOfNotes[1].innerHTML = `yeah sorry, i honestly have no idea what this note said`;
+          } else {
+            listOfNotes[1].innerHTML = `in my defense, you've asked me to remember a lot of things`;
+          };
         };
         if (i === 2) {
-          listOfNotes[2].innerHTML = 'yeah sorry, i honestly have no idea what this note was.';
+          if (random) {
+            listOfNotes[2].innerHTML = `will you blame the code if i just say undefined`;
+          } else {
+            listOfNotes[2].innerHTML = `this was definitely null, and no i've never heard of gaslighting`;
+          };
         };
         listOfNotes[i].style.color = 'rgba(0,0,0,1)';
       }, 1000);
     };
   };
-  // 2 words (2) / 3 words (3) / 4 words (1/4) / 5 words (1/3/5) / 6+ words (1/3/4/6)
-  const getWords = (note) => {
+  // TODO: still some issue on the number of loops and the 2nd iteration is getting over written with the replacement note
+  const getWords = (note, random) => {
     let words = note.innerHTML.split(' ');
-    let random = Math.floor(Math.random() * 10);
-    // console.log(random);
-
-    // return words;
     if (words.length === 1) {
-      if (random % 2 === 0) {
+      if (random) {
         return 'umm...what?';
       } else {
         return 'yeah i spaced out there';
       };
     } else if (words.length === 2) {
-      if (random % 2 === 0) {
+      if (random) {
         return `something ${words[1]}`;
       } else {
         return `uuuhhhh....${words[1]}?`;
       };
     } else if (words.length === 3) {
-      if (random % 2 === 0) {
+      if (random) {
         return `maybe something ${words[2]}`;
       } else {
         return `uuuhhhh....${words[2]}?`;
       };
     } else if (words.length === 4) {
-      if (random % 2 === 0) {
+      if (random) {
         return `${words[0]} maybe something ${words[3]}`;
       } else {
         return `it's like ${words[0]} or yeah like and ${words[3]}...maybe?`;
       };
-
     } else if (words.length === 5) {
-      if (random % 2 === 0) {
+      if (random) {
         return `${words[0]}...errr...ummm....also ${words[2]} and ${words[4]}`;
       } else {
         return `i know it ended with ${words[4]}`;
@@ -77,8 +72,8 @@ const NotesForm = (props) => {
     };
   };
 
-
   useEffect(() => {
+    document.getElementById('note-input').focus();
     if (props.notesList.length < 3) {
       return;
     } else if (props.notesList.length === 3) {
@@ -112,7 +107,7 @@ const NotesForm = (props) => {
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
-      <input className={styles.textInput} id="note-input" type="text" onChange={handleChange} placeholder="Enter Note Here" />
+      <input className={styles.textInput} id="note-input" type="text" onChange={handleChange} placeholder="Enter Note Here" autoFocus="autofocus" />
       <input type="submit" value="Remember" className={styles.submitButton} />
     </form>
   )
