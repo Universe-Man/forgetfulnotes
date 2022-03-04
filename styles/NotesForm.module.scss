@@ -2,18 +2,29 @@
   display: flex;
   justify-content: center;
   padding: 10px;
+  flex-direction: column;
+
+  @media screen and (min-width: 690px) {
+    flex-direction: row;
+  }
 }
 
 .textInput {
   padding: 10px;
   background-color: #fff1c7;
   margin: 0 10px;
-  min-width: 500px;
+  margin-bottom: 20px;
   min-height: 50px;
   text-align: center;
   border: black 3px solid;
   border-radius: 15px;
   font-size: 20px;
+
+  @media screen and (min-width: 690px) {
+    flex-direction: row;
+    min-width: 500px;
+    margin-bottom: 0;
+  }
 }
 
 .submitButton {
