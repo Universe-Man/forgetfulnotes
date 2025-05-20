@@ -1,3 +1,9 @@
+Welcome to Forgetful Notes!
+
+To run locally, run "npm run dev" in your terminal.
+
+You can find the project running at http://localhost:3000 in the browser of your choice.
+
 <!-- FUTURE DEVELOPMENT PLANS:
 1) SCRAMBLING WORDS AND HAVING MORE LEVELS OF FORGETFULNESS
 2) ADD SOUND EFFECTS AND VISUAL ANIMATIONS
